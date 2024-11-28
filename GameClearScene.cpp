@@ -13,11 +13,11 @@ void GameClearScene::Initialize()
 
 void GameClearScene::Update()
 {
-	if (Input::IsKey(DIK_SPACE))
-	{
-		SceneManager* pSceneManager = (SceneManager*)FindObject("SceneManager");
-		pSceneManager->ChangeScene(SCENE_ID_PLAY);
-	}
+	//if (Input::IsKey(DIK_SPACE))
+	//{
+	//	SceneManager* pSceneManager = (SceneManager*)FindObject("SceneManager");
+	//	pSceneManager->ChangeScene(SCENE_ID_PLAY);
+	//}
 }
 
 void GameClearScene::Draw()

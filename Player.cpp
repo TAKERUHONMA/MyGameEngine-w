@@ -3,6 +3,7 @@
 #include "ChildOden.h"
 #include "Engine/Input.h"
 #include "Model.h"
+#include "SceneManager.h"
 
 Player::Player(GameObject* parent)
 	:GameObject(parent,"Player"), hModel(-1)
@@ -51,7 +52,6 @@ void Player::Update()
 		p->SetPosition(transform_.position_);
 		p->SetScale(0.2, 0.2, 0.2);
 	}
-
 }
 
 void Player::Draw()

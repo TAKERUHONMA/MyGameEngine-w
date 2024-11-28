@@ -4,6 +4,8 @@ class Enemy :
     public GameObject
 {
     int hModel;
+    bool isAlive;
+    //int count;
 public:
     Enemy();
     Enemy(GameObject* parent);
@@ -14,7 +16,11 @@ public:
     XMFLOAT3 GetPosition()
     { return (transform_.position_); }
 
-    void OnCollision(GameObject* pTarget);
+    void OnCollision(GameObject* pTarget) override;
 
+    void DeActivateMe() { isAlive = false; }
+    void ActivateMe() { isAlive = true; }
+
+    //void EnemyCount(int _count);
 };
 

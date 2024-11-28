@@ -2,13 +2,14 @@
 #include "Model.h"
 #include "ChildOden.h"
 #include "Engine\SphereCollider.h"
+#include "SceneManager.h"
 
 Enemy::Enemy()
 {
 }
 
 Enemy::Enemy(GameObject* parent)
-	:GameObject(parent, "Enemy"),hModel(-1)
+	:GameObject(parent, "Enemy"), hModel(-1), isAlive(true)
 {
 }
 
@@ -33,8 +34,11 @@ void Enemy::Update()
 
 void Enemy::Draw()
 {
-	Model::SetTransform(hModel, transform_);
-	Model::Draw(hModel);
+	if (true)
+	{
+		Model::SetTransform(hModel, transform_);
+		Model::Draw(hModel);
+	}
 }
 
 void Enemy::Release()
@@ -48,3 +52,9 @@ void Enemy::OnCollision(GameObject* pTarget)
 		this->KillMe();
 	}
 }
+
+//void Enemy::EnemyCount(int _count)
+//{
+//	SceneManager* pSceneManager = (SceneManager*)FindObject("SceneManager");
+//	pSceneManager->ChangeScene(SCENE_ID_CLEAR);
+//}

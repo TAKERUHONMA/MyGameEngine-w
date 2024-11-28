@@ -25,6 +25,6 @@ class ChildOden :
         //ŠJ•ú
         void Release() override;
 
-        void OnCollision(GameObject* pTarget);
+        void OnCollision(GameObject* pTarget) override;
 };
 
