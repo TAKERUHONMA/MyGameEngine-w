@@ -1,19 +1,14 @@
 #pragma once
 #include "Engine/GameObject.h"
-
-class Fbx;
-
-class Player :
+class EnemyBullet :
     public GameObject
 {
+    //Fbx* pFbx;
     int hModel;
-//    Fbx* pFbx;
 public:
     //コンストラクタ
-    Player(GameObject* parent);
-
-    //デストラクタ
-    ~Player();
+    //引数：parent  親オブジェクト（SceneManager）
+    EnemyBullet(GameObject* parent);
 
     //初期化
     void Initialize() override;
@@ -26,12 +21,5 @@ public:
 
     //開放
     void Release() override;
-
-    XMFLOAT3 GetPosition()
-    {
-        return (transform_.position_);
-    }
-
-    void PlayerCount(int _count);
 };
 

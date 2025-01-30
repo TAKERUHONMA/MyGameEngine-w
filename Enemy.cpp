@@ -3,13 +3,14 @@
 #include "ChildOden.h"
 #include "Engine\SphereCollider.h"
 #include "SceneManager.h"
+#include "EnemyBullet.h"
 
 Enemy::Enemy()
 {
 }
 
 Enemy::Enemy(GameObject* parent)
-	:GameObject(parent, "Enemy"), hModel(-1), isAlive(true)
+	:GameObject(parent, "Enemy"), hModel(-1), isAlive(true),count(100)
 {
 }
 
@@ -26,10 +27,19 @@ void Enemy::Initialize()
 
 void Enemy::Update()
 {
+	count--;
 	static int dt;
 	dt++;
 	float nTime = dt / (10.0f * 10.0f) - 2.0f;
 	transform_.position_.x = 4.0 * sin(nTime);
+
+	if (count == 0)
+	{
+		GameObject* p = Instantiate<EnemyBullet>(this);
+		p->SetPosition(transform_.position_);
+		p->SetScale(0.2, 0.2, 0.2);
+		count = 100;
+	}
 }
 
 void Enemy::Draw()

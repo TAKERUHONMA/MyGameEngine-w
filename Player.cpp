@@ -4,9 +4,10 @@
 #include "Engine/Input.h"
 #include "Model.h"
 #include "SceneManager.h"
+#include "EnemyBullet.h"
 
 Player::Player(GameObject* parent)
-	:GameObject(parent,"Player"), hModel(-1)
+	:GameObject(parent, "Player"), hModel(-1)
 {
 }
 
@@ -66,3 +67,13 @@ void Player::Release()
 	//pFbx->Release();
 	//delete pFbx;
 }
+
+void Player::PlayerCount(int _count)
+{
+	if (_count == 0)
+	{
+		SceneManager* pSceneManager = (SceneManager*)FindObject("SceneManager");
+		pSceneManager->ChangeScene(SCENE_ID_CLEAR);
+	}
+}
+

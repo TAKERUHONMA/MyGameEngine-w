@@ -5,7 +5,7 @@ class Enemy :
 {
     int hModel;
     bool isAlive;
-    //int count;
+    int count;
 public:
     Enemy();
     Enemy(GameObject* parent);
