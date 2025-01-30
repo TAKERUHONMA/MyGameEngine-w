@@ -21,6 +21,6 @@ public:
     void DeActivateMe() { isAlive = false; }
     void ActivateMe() { isAlive = true; }
 
-    //void EnemyCount(int _count);
+    void EnemyCount(int _count);
 };
 

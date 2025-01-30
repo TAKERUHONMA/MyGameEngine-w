@@ -53,8 +53,11 @@ void Enemy::OnCollision(GameObject* pTarget)
 	}
 }
 
-//void Enemy::EnemyCount(int _count)
-//{
-//	SceneManager* pSceneManager = (SceneManager*)FindObject("SceneManager");
-//	pSceneManager->ChangeScene(SCENE_ID_CLEAR);
-//}
+void Enemy::EnemyCount(int _count)
+{
+	if(_count == 0)
+	{
+		SceneManager* pSceneManager = (SceneManager*)FindObject("SceneManager");
+		pSceneManager->ChangeScene(SCENE_ID_CLEAR);
+	}
+}

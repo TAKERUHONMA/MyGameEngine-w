@@ -39,7 +39,7 @@ void ChildOden::Update()
 
         if (d <= r1 + r2)
         {
-            //enemy->EnemyCount(0);
+            enemy->EnemyCount(0);
             enemy->KillMe();
             KillMe();
         }
