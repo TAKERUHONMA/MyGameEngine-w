@@ -1,20 +1,17 @@
-#include "GameClearScene.h"
+#include "GameOverScene.h"
 #include "SceneManager.h"
 #include "Engine/Input.h"
-#include "Engine/Sprite.h"
-#include "Player.h"
 
-GameClearScene::GameClearScene(GameObject* parent)
-	:GameObject(parent, "GameClear"),count(0)
+GameOverScene::GameOverScene(GameObject* parent)
+	:GameObject(parent, "GameOver"),count(0)
 {
 }
 
-void GameClearScene::Initialize()
+void GameOverScene::Initialize()
 {
-	Instantiate<Player>(this);
 }
 
-void GameClearScene::Update()
+void GameOverScene::Update()
 {
 	count--;
 	if (Input::IsKey(DIK_SPACE))
@@ -27,7 +24,7 @@ void GameClearScene::Update()
 	{
 		count = 10;
 	}
-	
+
 	if (count == 0)
 	{
 		SceneManager* pSceneManager = (SceneManager*)FindObject("SceneManager");
@@ -35,10 +32,10 @@ void GameClearScene::Update()
 	}
 }
 
-void GameClearScene::Draw()
+void GameOverScene::Draw()
 {
 }
 
-void GameClearScene::Release()
+void GameOverScene::Release()
 {
 }

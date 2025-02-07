@@ -73,7 +73,7 @@ void Player::PlayerCount(int _count)
 	if (_count == 0)
 	{
 		SceneManager* pSceneManager = (SceneManager*)FindObject("SceneManager");
-		pSceneManager->ChangeScene(SCENE_ID_CLEAR);
+		pSceneManager->ChangeScene(SCENE_ID_OVER);
 	}
 }
 
