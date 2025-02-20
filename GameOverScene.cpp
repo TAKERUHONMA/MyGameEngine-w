@@ -1,6 +1,7 @@
 #include "GameOverScene.h"
 #include "SceneManager.h"
 #include "Engine/Input.h"
+#include "Engine/Sprite.h"
 
 GameOverScene::GameOverScene(GameObject* parent)
 	:GameObject(parent, "GameOver"),count(0)
@@ -9,6 +10,8 @@ GameOverScene::GameOverScene(GameObject* parent)
 
 void GameOverScene::Initialize()
 {
+	q = new Sprite();
+	q->Load("Assets\\ss.png");
 }
 
 void GameOverScene::Update()
@@ -34,6 +37,7 @@ void GameOverScene::Update()
 
 void GameOverScene::Draw()
 {
+	q->Draw(transform_);
 }
 
 void GameOverScene::Release()

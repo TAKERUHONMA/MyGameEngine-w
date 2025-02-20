@@ -11,6 +11,9 @@ GameClearScene::GameClearScene(GameObject* parent)
 
 void GameClearScene::Initialize()
 {
+	q = new Sprite();
+	q->Load("Assets\\ss.png");
+
 	Instantiate<Player>(this);
 }
 
@@ -37,6 +40,7 @@ void GameClearScene::Update()
 
 void GameClearScene::Draw()
 {
+	q->Draw(transform_);
 }
 
 void GameClearScene::Release()
