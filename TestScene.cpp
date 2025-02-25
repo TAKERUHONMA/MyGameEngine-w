@@ -11,7 +11,7 @@ TestScene::TestScene(GameObject* parent)
 void TestScene::Initialize()
 {
 	q = new Sprite();
-	q->Load("Assets\\ss.png");
+	q->Load("Assets\\odeng.png");
 }
 
 void TestScene::Update()

@@ -12,7 +12,7 @@ GameClearScene::GameClearScene(GameObject* parent)
 void GameClearScene::Initialize()
 {
 	q = new Sprite();
-	q->Load("Assets\\ss.png");
+	q->Load("Assets\\odenclear.png");
 
 	Instantiate<Player>(this);
 }

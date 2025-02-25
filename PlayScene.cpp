@@ -22,11 +22,6 @@ void PlayScene::Initialize()
 
 void PlayScene::Update()
 {
-	if (Input::IsKey(DIK_B))
-	{
-		SceneManager* pSceneManager = (SceneManager*)FindObject("SceneManager");
-		pSceneManager->ChangeScene(SCENE_ID_CLEAR);
-	}
 }
 
 void PlayScene::Draw()

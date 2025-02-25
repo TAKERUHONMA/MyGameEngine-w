@@ -11,7 +11,7 @@ GameOverScene::GameOverScene(GameObject* parent)
 void GameOverScene::Initialize()
 {
 	q = new Sprite();
-	q->Load("Assets\\ss.png");
+	q->Load("Assets\\odenover.png");
 }
 
 void GameOverScene::Update()
